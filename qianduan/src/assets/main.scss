@@ -1,0 +1,102 @@
+
+body{
+  margin: 0;
+  background-color:#fcfff4;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
+.title_info{
+  height: 32px;
+  padding: 20px 0 20px 0;
+  font-size: 24px;
+  color: #222;
+  font-weight: 600;
+  margin-top: 20px;
+  line-height: 32px;
+}
+
+/* 自定义滚动条样式 */
+/* Webkit浏览器 */
+::-webkit-scrollbar {
+  width: 1px; /* 滚动条宽度 */
+  height: 1px;
+}
+
+
+.backContainer {
+  max-width: 1350px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+}
+
+
+.search-bar {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+
+
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.filter-types, .filter-paying, .filter-annual {
+  flex-basis: 30%;
+}
+
+
+
+.backContainerCard {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+
+
+.backContainerCard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.job-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.job-requirements p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.job-requirements ul {
+  padding-left: 20px;
+}
+
