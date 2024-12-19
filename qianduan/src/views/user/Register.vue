@@ -21,7 +21,8 @@ const form = ref({
   email: '',
   nickname: '',
   avatar: '',
-  bio: ''
+  bio: '',
+  role:'USER'
 })
 
 const handleAvatarSuccess = (response) => {
@@ -29,8 +30,7 @@ const handleAvatarSuccess = (response) => {
 }
 
 const register = () => {
-  request.post('/sysUser/register', form.value).then(() => {
-    ElMessage.success('Registration successful')
+  request.post('/system/register', form.value).then(() => {
     router.push('/login')
   })
 }
@@ -43,7 +43,7 @@ const register = () => {
       <div class="info-section">
         <h1 class="title">Join Us</h1>
         <p class="subtitle">Start your learning and social journey here</p>
-        
+
         <div class="features">
           <div class="feature-item">
             <el-icon><Document /></el-icon>
@@ -89,25 +89,25 @@ const register = () => {
           </el-form-item>
 
           <el-form-item>
-            <el-input 
-              v-model="form.username" 
+            <el-input
+              v-model="form.username"
               placeholder="account"
               :prefix-icon="User"
             />
           </el-form-item>
 
           <el-form-item>
-            <el-input 
-              v-model="form.nickname" 
+            <el-input
+              v-model="form.nickname"
               placeholder="user name"
               :prefix-icon="UserFilled"
             />
           </el-form-item>
 
           <el-form-item>
-            <el-input 
-              v-model="form.password" 
-              type="password" 
+            <el-input
+              v-model="form.password"
+              type="password"
               placeholder="password"
               show-password
               :prefix-icon="Lock"
@@ -115,8 +115,8 @@ const register = () => {
           </el-form-item>
 
           <el-form-item>
-            <el-input 
-              v-model="form.email" 
+            <el-input
+              v-model="form.email"
               placeholder="email"
               :prefix-icon="Message"
             />
@@ -133,15 +133,15 @@ const register = () => {
           </el-form-item>
 
           <div class="button-container">
-            <el-button 
-              type="primary" 
-              class="sign-in-button" 
+            <el-button
+              type="primary"
+              class="sign-in-button"
               @click="register"
             >
-              Sign in
+              Register
             </el-button>
-            <el-button 
-              class="return-button" 
+            <el-button
+              class="return-button"
               @click="$router.push('/login')"
             >
               Return
@@ -239,10 +239,10 @@ const register = () => {
           overflow: hidden;
           border: 2px dashed #dcdfe6;
           transition: all 0.3s;
-          
+
           &:hover {
             border-color: #7571f9;
-            
+
             .upload-placeholder {
               color: #7571f9;
             }
